@@ -69,6 +69,7 @@ under which conditions. This can best be observed as a flow chart where each sha
 process.
 
 *Fig 1: What to do when it is raining?*
+
 ![flow_chart_example.jpg](pictures/flow_chart_example.jpg)
 
 In a flowchart, there is usually more than one way to go from the start to the end. Flowcharts represent these branching
@@ -131,6 +132,7 @@ consists of the following:
 - Starting on the next line, an indented block of code (called the *if clause*)
 
 *Fig 2: Flowchart of an if statement*
+
 ![img.png](pictures/if_flow_control.png)
 
 The pythonic way of writing the logic shown in the flowchart would be as follows
@@ -148,6 +150,7 @@ statement doesn’t have a condition, and in code, an else statement always cons
 - Starting on the next line, an indented block of code (called the *else clause*)
 
 *Fig 3: Flowchart of an else statement*
+
 ![img.png](pictures/else_flow_control.png)
 
 The example builds on the if statement and can be written as
@@ -168,6 +171,7 @@ previous conditions were False (so order of statements is important). In code, a
 - Starting on the next line, an indented block of code (called the *elif clause*)
 
 *Fig 4: Flowchart of an elif statement*
+
 ![img.png](pictures/elif_flow_control.png)
 
 The example builds on the previous examples and can be written as
@@ -193,6 +197,7 @@ an if clause, the program execution continues after the if statement. But at the
 execution jumps back to the start of the while statement. The while clause is often called the while loop.
 
 *Fig 5: Flowchart of a while statement*
+
 ![img.png](pictures/while_flow_control.png)
 
 The pythonic way of writing the logic shown in the flowchart would be as follows
@@ -218,6 +223,7 @@ while the condition is met. A for loop includes:
 - A colon
 
 *Fig 5: Flowchart of a for statement*
+
 ![img.png](pictures/for_flow_control.png)
 
 The pythonic way of writing the logic shown in the flowchart would be as follows
