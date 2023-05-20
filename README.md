@@ -232,3 +232,51 @@ print('My name is')
 for i in range(5):
     print('Jimmy Five Times (' + str(i) + ')')
 ```
+
+### 3. Functions
+
+A function is a block of organized, reusable code that is performed when the function is called. Functions are useful as
+they allow for deduplication of code. Often, functions will take in an input (or argument) and return an output. A 
+function consists of:
+- The `def` keyword 
+- A function name 
+- Arguments of the function 
+- A colon
+- A block of code (which may include the `return` keyword)
+
+An example of a function is as follows:
+```
+def exponentiation(base, power):
+    result = base^power
+    return result
+    
+exponentiation(3, 2)
+>> 9
+```
+
+As we can see in the example above, the function can be called whenever we need to do exponent calculations. The
+function itself includes the arguments base and power, with the function returning the evaluated exponent calculation.
+When the function is called we provide the inputs that we require and these values take the place of the arguments in
+the calculation.
+
+Another concept to consider is the idea of `global` and `local` scope of variables. The `result` variable in the example
+above is in the function and considered a local scope variable. This means that the variable does not exist outside the 
+function (or, in other words, the global scope). Variables in local scope cannot be used in the global scope or in other
+local scopes. The variable wil need to be defined outside the function to be considered a global scope variable or the
+`global` keyword can be used before the variable to highlight its scope.
+
+A useful technique to consider when creating a function is exception handling. Exceptions occur when there are logical
+errors and this will show in the terminal. An example of this is the ZeroDivisionError which occurs when there is
+division by zero. These errors can be handled with `try` and `except` clauses which allows the code to execute. Example:
+
+```
+def division(number, quotient):
+    try:
+        return number / quotient
+    except ZeroDivisionError:
+        print('Error: Invalid argument.')
+```
+
+
+
+
