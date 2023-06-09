@@ -255,15 +255,16 @@ exponentiation(3, 2)
 ```
 
 As we can see in the example above, the function can be called whenever we need to do exponent calculations. The
-function itself includes the arguments base and power, with the function returning the evaluated exponent calculation.
-When the function is called we provide the inputs that we require and these values take the place of the arguments in
-the calculation.
+function itself includes the parameters `base` and `power`, with the function returning the evaluated exponent
+calculation. When the function is called we provide the arguments that we require (`3` for base and `2` power) and these
+values take the place of the parameter in the calculation.
 
 Another concept to consider is the idea of `global` and `local` scope of variables. The `result` variable in the example
 above is in the function and considered a local scope variable. This means that the variable does not exist outside the 
 function (or, in other words, the global scope). Variables in local scope cannot be used in the global scope or in other
 local scopes. The variable wil need to be defined outside the function to be considered a global scope variable or the
-`global` keyword can be used before the variable to highlight its scope.
+`global` keyword can be used before the variable to highlight its scope. Global scope variables can be called in local
+scopes such as functions.
 
 A useful technique to consider when creating a function is exception handling. Exceptions occur when there are logical
 errors and this will show in the terminal. An example of this is the ZeroDivisionError which occurs when there is
@@ -277,6 +278,51 @@ def division(number, quotient):
         print('Error: Invalid argument.')
 ```
 
+### 4. Lists
 
+#### 4.1 Defining a list
+A list is a data type that contains multiple values in an ordered sequence. The term *list value* refers to the list
+itself (which can be stored in a variable or passed to a function). As an example, a list value `animal` contains: 
+['cat', 'bat', 'rat', 'elephant']. A list begins with an opening square bracket and ends with a closing square bracket,
+[]. Values inside the list are also called items. Items are separated with commas (that is, they are comma-delimited).
 
+Lists are not the only datatype that is part of the larger sequence data type and a lot of the techniques discussed
+below are shared by data types such as tuples (which uses `()` instead of `[]`). Another key point to mention is that a
+list is mutable (it can be changed) and changes to the list will not change the identity of the variable on the PC (if
+you are interested look into the `id()` function) while changes to an immutable data type variable like a string or
+tuple will result in a new variable even if the same name is used.
+
+#### 4.2 Indexing
+The contents of a list value can be found using *indexing*. This is achieved by calling the list value and the index
+(position specified by an Integer) of the item you wish to see. It is important to note that zero-indexing is used so
+the position number will start at 0. As an example, `animal[2]` would be `rat`. Python will call an exception if the index
+is out of the list range. A *negative index* can also be used which will count towards the left of the list value
+instead of the right, i.e. `animal[-1]` would be `elephant`. Another useful feature when using indices is a *slice*. A
+slice has a start and end number, which will create a new list consisting of the elements from the start number up to
+(but not including) the end number. So `animal[1:3]` would result in `['bat', 'rat']`.
+
+An item in a list can be changed by calling its index position and reassigning the variable. `animal[-1] = 'cow'` will
+change `animal` to ['cat', 'bat', 'rat', 'cow'].
+
+#### 4.3 List Operations
+- List items can be removed using a `del`statement followed by the item position
+- The `+` operator when used with lists will result in concatenation of the lists (similar to the string datatype)
+- The length of a list can be evaluated by wrapping a len() around the list
+- The `in` operator can be used to evaluate if an item is in a list value and will return a Boolean datatype
+- Can replace the `range()` condition mentioned in Section 2.3.1.5 (`for` loops), allowing for loops on string values
+- The `enumerate()` function used in a `for` loop will unpack a list into both it's item value and index position
+
+#### 4.4 List Methods
+A method is similar to a function except that it is called on a variable (value or datatype). Methods are built into
+datatypes and other package, so it is helpful to read documentation to understand what methods are available. A method
+is called with a `.method_name` straight after the variable name and will sometimes have () to allow for parameters. A 
+method will interact with the variable as an object and any changes will not need to be declared, e.g.
+`list.append('new item)` instead of`list = list + 'new item'`. The reason for this lies in a topic called Object
+Oriented Programming (or Claases) and is out of scope for this book. Some of the methods that can be applied to lists:
+- Can find the index value of an item using index(*item name*), i.e. `animal.index('rat')` will evaluate to 2
+- append(*item name*) or insert(*index position*, *item name*) can be used to add new values to the list
+- remove(*item name*) can be used to delete an item from a list, beneficial to `del` when index position is not known
+- Items can be sorted in a list using sort(), this will sort either numerically or alphabetically based on data
+  - The sort order can be changed using `sort(reverse=True)`
+- The list order can be flipped around using reverse() which will swap the first and last elements and so on
 
