@@ -280,7 +280,7 @@ def division(number, quotient):
 
 ### 4. Lists
 
-#### 4.1 Defining a list
+#### 4.1 Defining a List
 A list is a data type that contains multiple values in an ordered sequence. The term *list value* refers to the list
 itself (which can be stored in a variable or passed to a function). As an example, a list value `animal` contains: 
 ['cat', 'bat', 'rat', 'elephant']. A list begins with an opening square bracket and ends with a closing square bracket,
@@ -318,7 +318,7 @@ datatypes and other package, so it is helpful to read documentation to understan
 is called with a `.method_name` straight after the variable name and will sometimes have () to allow for parameters. A 
 method will interact with the variable as an object and any changes will not need to be declared, e.g.
 `list.append('new item)` instead of`list = list + 'new item'`. The reason for this lies in a topic called Object
-Oriented Programming (or Claases) and is out of scope for this book. Some of the methods that can be applied to lists:
+Oriented Programming (or Classes) and is out of scope for this book. Some of the methods that can be applied to lists:
 - Can find the index value of an item using index(*item name*), i.e. `animal.index('rat')` will evaluate to 2
 - append(*item name*) or insert(*index position*, *item name*) can be used to add new values to the list
 - remove(*item name*) can be used to delete an item from a list, beneficial to `del` when index position is not known
@@ -326,3 +326,21 @@ Oriented Programming (or Claases) and is out of scope for this book. Some of the
   - The sort order can be changed using `sort(reverse=True)`
 - The list order can be flipped around using reverse() which will swap the first and last elements and so on
 
+### 5. Dictionary
+
+#### 5.1 Defining a Dictionary
+A dictionary is similar to a list in that is a mutable collection of many values. The difference between the datatypes
+lies in how indexing is treated. A list uses the numerical position of the item as the index, while a dictionary uses a
+key-value pair approach to indexing. The latter approach allows a dictionary to use string values as the index for
+items. A dictionary is defined using `{}` brackets, while a colon specifies key-value pairs and a comma indicates a new
+item. For example, `my_cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}` and `my_cat['size'] == 'fat'`.
+The value in a dictionary can be a nested list or dictionary.
+
+#### 5.2 Dictionary Methods
+There are three dictionary methods that will return list-like values of the dictionary’s keys, values, or both keys and
+values: keys(), values(), and items(). The values returned by these methods are not true lists: they cannot be modified
+and do not have an append() method. But these data types (dict_keys, dict_values, and dict_items, respectively) can be
+used in for loops.
+
+The `setdefault(key, value_if_no_key)` method can be used if we are not sure that a key exists in the dictionary. The
+method will search for the key and if it does not exist then it will create a key-value pair based on the arguments.
