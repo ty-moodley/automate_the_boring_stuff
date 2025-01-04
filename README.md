@@ -1,15 +1,15 @@
 # Automate the Boring Stuff
-Using the book as a proxy for a beginner's course. The learnings here will be based on the 2nd edition of the book.
+Book used as a proxy for a beginner course. Learnings based on 2nd edition of the book.
 
 ### 0. What is programming?
-Programming is simply the act of entering instructions for the computer to perform. All programs use basic instructions 
-as building blocks. You can combine these building blocks to implement more intricate decisions
+Simply the act of entering instructions for the computer to perform. Programs use basic instructions 
+as building blocks. Building blocks can be combined to implement more intricate decisions
 
 ### 1. Python Basics
 
 #### 1.1 Expressions
 In Python, the most basic kind of programming instruction is called an *expression* (e.g 2+2). Expressions consist of 
-values (2) and operators (+), and they can always evaluate (that is, reduce) down to a single value. That means you can 
+values (2) and operators (+), which always evaluate (i.e. reduce) down to a single value. That means you can 
 use expressions anywhere in Python code that you could also use a value. A single value with no operators is also 
 considered an expression, though it evaluates only to itself. There are many other math operators in python, such as:
 
