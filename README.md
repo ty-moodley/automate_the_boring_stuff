@@ -359,8 +359,8 @@ ignore any escape characters in the string (useful for Windows filepaths).
 | \'               | Single quote               |
 | \"               | Double quote               |
 | \t               | Tab                        |
-| \n                | Newline (line break)        |
-| \\               | Backslash                  |
+| \n               | Newline (line break)       |
+| \\\              | Backslash                  |
 
 Triple quotes `""" text """` or `''' text '''` is used for multi-line text. Quotes, tabs and newlines can be used in the triple
 quotes and will be considered part of the string. Triple quotes are an effective method of writing multi-line comments.
