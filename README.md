@@ -344,3 +344,46 @@ used in for loops.
 
 The `setdefault(key, value_if_no_key)` method can be used if we are not sure that a key exists in the dictionary. The
 method will search for the key and if it does not exist then it will create a key-value pair based on the arguments.
+
+### 6. Strings
+
+#### 6.1 String Fundamentals
+Text format that is required to be typed in single or double quotation marks. An escape character `\` can be used for text
+which may be confused with special characters in Python. Using an `r` before the quotation marks of the string will
+ignore any escape characters in the string (useful for Windows filepaths).
+
+*Table 4: String Escape Character Operations*
+
+| Escape character | Prints as                  |
+|------------------|----------------------------|
+| \'               | Single quote               |
+| \"               | Double quote               |
+| \t               | Tab                        |
+| \n                | Newline (line break)        |
+| \\               | Backslash                  |
+
+Triple quotes `""" text """` or `''' text '''` is used for multi-line text. Quotes, tabs and newlines can be used in the triple
+quotes and will be considered part of the string. Triple quotes are an effective method of writing multi-line comments.
+
+Using `[]` brackets acts as an index for string variables. This will split the string into characters which can be accessed
+using the correct index value. Slices of strings can also be performed using `[start position:end position+1]`. Slicing
+does not modify the original string!
+
+`in` and `not in` operators can be used to check if a character or substring is present in the string.
+
+#### 6.2 String Methods
+The string datatype has built-in methods which are quite useful. `.upper()` and `.lower()` will convert the string into the
+appropriate case. These methods do not replace the original string unless declared. There are also a series of `isX()`
+methods which can be used to determine if strings are only uppercase, lowercase, letters, spaces, etc.
+
+The `startswith()` and `endswith()` methods can be used to determine if string begins or ends with the substring. The `.join()`
+method can be used to concatenate multiple strings together, while `.split()` will split the text by whitespace into a list.
+Including substring in the split method, i.e. `.split(",")` will split the text by the substring instead of whitespace
+
+Whitespace can be removed from string using `.strip()`, `.lstrip()` or `.rstrip()`. The operators are useful for removing
+trailing whitespace.
+
+The `ord('character')` function will convert a character into the unicode code point which is useful when sorting characters.
+Similarly, the `chr(number)` will convert a unicode code point into the character.
+
+
