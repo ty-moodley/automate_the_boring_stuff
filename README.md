@@ -356,8 +356,8 @@ ignore any escape characters in the string (useful for Windows filepaths).
 
 | Escape character | Prints as                  |
 |------------------|----------------------------|
-| \'               | Single quote               |
-| \"               | Double quote               |
+| \\'               | Single quote               |
+| \\"               | Double quote               |
 | \t               | Tab                        |
 | \n               | Newline (line break)       |
 | \\\              | Backslash                  |
