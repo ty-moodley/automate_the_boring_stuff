@@ -9,7 +9,7 @@ as building blocks. Building blocks can be combined to implement more intricate 
 
 #### 1.1 Expressions
 In Python, the most basic kind of programming instruction is called an *expression* (e.g 2+2). Expressions consist of 
-values (2) and operators (+), which always evaluate (i.e. reduce) down to a single value. That means you can 
+values (2) and operators (+), which always evaluate (i.e. reduce) down to a single value. Therefore you can 
 use expressions anywhere in Python code that you could also use a value. A single value with no operators is also 
 considered an expression, though it evaluates only to itself. There are many other math operators in python, such as:
 
@@ -27,7 +27,7 @@ considered an expression, though it evaluates only to itself. There are many oth
 
 The order of operations (precedence) follows mathematics. You can use parentheses to override the usual precedence if 
 you need to. Whitespace in between the operators and values doesn’t matter for Python (except for the indentation at the
-beginning of the line), but a single space is convention. These rules for putting operators and values together to form 
+beginning of the line), but a single space is convention. The rules for putting operators and values together to form 
 expressions are a fundamental part of Python as a programming language, just like the grammar rules that help us 
 communicate.
 
@@ -43,7 +43,7 @@ NB: The meaning of an operator may change based on the data types of the values 
 int values together but concatenate strings
 
 #### 1.3 Variables
-A variable is like a box in the computer’s memory where you can store a single value. If you want to use the result of 
+A variable is like a box in the computer’s memory where you can store values. If you want to use the result of 
 an evaluated expression later in your program, you can save it inside a variable using an *assignment statement*. An 
 assignment statement consists of a variable name, an equal sign (called the *assignment operator*), and the expression.
 An example is assigning the number of days as 30, e.g. `days = 30`.
@@ -254,7 +254,7 @@ exponentiation(3, 2)
 >> 9
 ```
 
-As we can see in the example above, the function can be called whenever we need to do exponent calculations. The
+The example above shows a function can be called whenever we need to do exponent calculations. The
 function itself includes the parameters `base` and `power`, with the function returning the evaluated exponent
 calculation. When the function is called we provide the arguments that we require (`3` for base and `2` power) and these
 values take the place of the parameter in the calculation.
@@ -314,7 +314,7 @@ change `animal` to ['cat', 'bat', 'rat', 'cow'].
 
 #### 4.4 List Methods
 A method is similar to a function except that it is called on a variable (value or datatype). Methods are built into
-datatypes and other package, so it is helpful to read documentation to understand what methods are available. A method
+datatypes and other packages, so it is helpful to read documentation to understand what methods are available. A method
 is called with a `.method_name` straight after the variable name and will sometimes have () to allow for parameters. A 
 method will interact with the variable as an object and any changes will not need to be declared, e.g.
 `list.append('new item)` instead of`list = list + 'new item'`. The reason for this lies in a topic called Object
