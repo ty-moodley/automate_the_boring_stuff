@@ -5,6 +5,8 @@ Book used as a proxy for a beginner course. Learnings based on 2nd edition of th
 Simply the act of entering instructions for the computer to perform. Programs use basic instructions 
 as building blocks. Building blocks can be combined to implement more intricate decisions
 
+## A. Theory
+
 ### 1. Python Basics
 
 #### 1.1 Expressions
@@ -386,4 +388,34 @@ trailing whitespace.
 The `ord('character')` function will convert a character into the unicode code point which is useful when sorting characters.
 Similarly, the `chr(number)` will convert a unicode code point into the character.
 
+### 7. Regular Expressions
+
+### 8. Working with Time Format
+
+## B. Application
+
+### 8. Manipulating Files (Section 9 and 10)
+
+### 9. Intro to Web-scraping
+
+### 10. Working with Excel Files
+
+### 11. Working with Google Sheets
+
+### 12. Working with PDFs and Word Documents
+
+### 13. Scheduling Tasks and Launching Programs
+
+### 14. Sending Emails and Texts
+
+### 15. Manipulating Images
+
+### 16. GUI Automation
+
+### 17. Other useful concepts from the course
+
+- Input validation ensures data integrity is intact. Some packages (e.g. pyinputplus from section 8) have built-in functions
+to assist with this
+- There are numerous tools to debug such as raising exceptions, using assertions, breakpoints and logging. Using logging is
+preferred over print() statements as logging can be deactivated with one command
 
