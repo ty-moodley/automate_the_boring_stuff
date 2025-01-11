@@ -1,15 +1,13 @@
 # Automate the Boring Stuff
 Book used as a proxy for a beginner course. Learnings based on 2nd edition of the book.
 
-### 0. What is programming?
+## 0. What is programming?
 Simply the act of entering instructions for the computer to perform. Programs use basic instructions 
 as building blocks. Building blocks can be combined to implement more intricate decisions
 
-## A. Theory
+## 1. Python Basics
 
-### 1. Python Basics
-
-#### 1.1 Expressions
+### 1.1 Expressions
 In Python, the most basic kind of programming instruction is called an *expression* (e.g 2+2). Expressions consist of 
 values (2) and operators (+), which always evaluate (i.e. reduce) down to a single value. Therefore you can 
 use expressions anywhere in Python code that you could also use a value. A single value with no operators is also 
@@ -33,7 +31,7 @@ beginning of the line), but a single space is convention. The rules for putting 
 expressions are a fundamental part of Python as a programming language, just like the grammar rules that help us 
 communicate.
 
-#### 1.2 Data Types
+### 1.2 Data Types
 A data type is a category for values, and every value belongs to exactly one data type. The most common data types in 
 Python are:
 - Integer (or int) data type indicates values that are whole numbers
@@ -44,7 +42,7 @@ string begins and ends
 NB: The meaning of an operator may change based on the data types of the values next to it, e.g. a "+" operator will add
 int values together but concatenate strings
 
-#### 1.3 Variables
+### 1.3 Variables
 A variable is like a box in the computer’s memory where you can store values. If you want to use the result of 
 an evaluated expression later in your program, you can save it inside a variable using an *assignment statement*. An 
 assignment statement consists of a variable name, an equal sign (called the *assignment operator*), and the expression.
@@ -61,9 +59,9 @@ anything as long as it obeys the following three rules:
 - Use only letters, numbers, and the underscore (_) character
 - Can’t begin with a number
 
-### 2. Flow Control
+## 2. Flow Control
 
-#### 2.1 Intro
+### 2.1 Intro
 A program is a series of instructions or expressions, but programming’s real strength isn’t just running one instruction after another 
 like a weekend errand list. Based on how expressions evaluate, a program can decide to skip instructions, repeat them, 
 or choose one of several instructions to run. Flow control statements can decide which Python instructions to execute 
@@ -79,7 +77,7 @@ points with diamonds, while the other steps are represented with rectangles. The
 represented with rounded rectangles. Similar ideas can be implemented in code and an important building block to explore
 is Boolean operators.
 
-#### 2.2 Boolean Operators
+### 2.2 Boolean Operators
 The Boolean data type has only two values `True` and `False`. It is used in expressions and can be stored in variables.
 *Comparison Operators* compare two values (or expressions) and evaluate down to a single Boolean value (i.e. True or 
 False).
@@ -113,7 +111,7 @@ The *not* operator pairs with a single Boolean value and will evaluate to the op
 Boolean Operators and Comparison Operators can be used together and multiple operators can be used in the same 
 expression. An order of precedence also exists for these operators with *not* occurring first.
 
-#### 2.3 Elements of Flow Control
+### 2.3 Elements of Flow Control
 Flow control statements often start with a part called the *condition* (an expression that evaluates to a Boolean value)
 and are always followed by a block (multiple lines) of code called the *clause*. You can tell when a block begins and 
 ends from the indentation of the lines of code. There are three rules for blocks:
@@ -121,7 +119,7 @@ ends from the indentation of the lines of code. There are three rules for blocks
 - Blocks can contain other blocks
 - Blocks end when the indentation decreases to zero or to a containing block’s indentation
 
-##### 2.3.1 Conditional Statements
+#### 2.3.1 Conditional Statements
 
 ##### 2.3.1.1 `if` Statement
 The most common type of flow control statement is the *if statement*. An if statement’s clause (that is, the block 
@@ -235,7 +233,7 @@ for i in range(5):
     print('Jimmy Five Times (' + str(i) + ')')
 ```
 
-### 3. Functions
+## 3. Functions
 
 A function is a block of organized, reusable code that is performed when the function is called. Functions are useful as
 they allow for deduplication of code. Often, functions will take in an input (or argument) and return an output. A 
@@ -280,9 +278,9 @@ def division(number, quotient):
         print('Error: Invalid argument.')
 ```
 
-### 4. Lists
+## 4. Lists
 
-#### 4.1 Defining a List
+### 4.1 Defining a List
 A list is a data type that contains multiple values in an ordered sequence. The term *list value* refers to the list
 itself (which can be stored in a variable or passed to a function). As an example, a list value `animal` contains: 
 ['cat', 'bat', 'rat', 'elephant']. A list begins with an opening square bracket and ends with a closing square bracket,
@@ -294,7 +292,7 @@ list is mutable (it can be changed) and changes to the list will not change the 
 you are interested look into the `id()` function) while changes to an immutable data type variable like a string or
 tuple will result in a new variable even if the same name is used.
 
-#### 4.2 Indexing
+### 4.2 Indexing
 The contents of a list value can be found using *indexing*. This is achieved by calling the list value and the index
 (position specified by an Integer) of the item you wish to see. It is important to note that zero-indexing is used so
 the position number will start at 0. As an example, `animal[2]` would be `rat`. Python will call an exception if the index
@@ -306,7 +304,7 @@ slice has a start and end number, which will create a new list consisting of the
 An item in a list can be changed by calling its index position and reassigning the variable. `animal[-1] = 'cow'` will
 change `animal` to ['cat', 'bat', 'rat', 'cow'].
 
-#### 4.3 List Operations
+### 4.3 List Operations
 - List items can be removed using a `del`statement followed by the item position
 - The `+` operator when used with lists will result in concatenation of the lists (similar to the string datatype)
 - The length of a list can be evaluated by wrapping a len() around the list
@@ -314,7 +312,7 @@ change `animal` to ['cat', 'bat', 'rat', 'cow'].
 - Can replace the `range()` condition mentioned in Section 2.3.1.5 (`for` loops), allowing for loops on string values
 - The `enumerate()` function used in a `for` loop will unpack a list into both it's item value and index position
 
-#### 4.4 List Methods
+### 4.4 List Methods
 A method is similar to a function except that it is called on a variable (value or datatype). Methods are built into
 datatypes and other packages, so it is helpful to read documentation to understand what methods are available. A method
 is called with a `.method_name` straight after the variable name and will sometimes have () to allow for parameters. A 
@@ -328,9 +326,9 @@ Oriented Programming (or Classes) and is out of scope for this book. Some of the
   - The sort order can be changed using `sort(reverse=True)`
 - The list order can be flipped around using reverse() which will swap the first and last elements and so on
 
-### 5. Dictionary
+## 5. Dictionary
 
-#### 5.1 Defining a Dictionary
+### 5.1 Defining a Dictionary
 A dictionary is similar to a list in that is a mutable collection of many values. The difference between the datatypes
 lies in how indexing is treated. A list uses the numerical position of the item as the index, while a dictionary uses a
 key-value pair approach to indexing. The latter approach allows a dictionary to use string values as the index for
@@ -338,7 +336,7 @@ items. A dictionary is defined using `{}` brackets, while a colon specifies key-
 item. For example, `my_cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}` and `my_cat['size'] == 'fat'`.
 The value in a dictionary can be a nested list or dictionary.
 
-#### 5.2 Dictionary Methods
+### 5.2 Dictionary Methods
 There are three dictionary methods that will return list-like values of the dictionary’s keys, values, or both keys and
 values: keys(), values(), and items(). The values returned by these methods are not true lists: they cannot be modified
 and do not have an append() method. But these data types (dict_keys, dict_values, and dict_items, respectively) can be
@@ -347,9 +345,9 @@ used in for loops.
 The `setdefault(key, value_if_no_key)` method can be used if we are not sure that a key exists in the dictionary. The
 method will search for the key and if it does not exist then it will create a key-value pair based on the arguments.
 
-### 6. Strings
+## 6. Strings
 
-#### 6.1 String Fundamentals
+### 6.1 String Fundamentals
 Text format that is required to be typed in single or double quotation marks. An escape character `\` can be used for text
 which may be confused with special characters in Python. Using an `r` before the quotation marks of the string will
 ignore any escape characters in the string (useful for Windows filepaths).
@@ -373,7 +371,7 @@ does not modify the original string!
 
 `in` and `not in` operators can be used to check if a character or substring is present in the string.
 
-#### 6.2 String Methods
+### 6.2 String Methods
 The string datatype has built-in methods which are quite useful. `.upper()` and `.lower()` will convert the string into the
 appropriate case. These methods do not replace the original string unless declared. There are also a series of `isX()`
 methods which can be used to determine if strings are only uppercase, lowercase, letters, spaces, etc.
@@ -388,31 +386,29 @@ trailing whitespace.
 The `ord('character')` function will convert a character into the unicode code point which is useful when sorting characters.
 Similarly, the `chr(number)` will convert a unicode code point into the character.
 
-### 7. Regular Expressions
+## 7. Regular Expressions
 
-### 8. Working with Time Format
+## 8. Working with Time Format
 
-## B. Application
+## 9. Manipulating Files (Section 9 and 10)
 
-### 8. Manipulating Files (Section 9 and 10)
+## 10. Intro to Web-scraping
 
-### 9. Intro to Web-scraping
+## 11. Working with Excel Files
 
-### 10. Working with Excel Files
+## 12. Working with Google Sheets
 
-### 11. Working with Google Sheets
+## 13. Working with PDFs and Word Documents
 
-### 12. Working with PDFs and Word Documents
+## 14. Scheduling Tasks and Launching Programs
 
-### 13. Scheduling Tasks and Launching Programs
+## 15. Sending Emails and Texts
 
-### 14. Sending Emails and Texts
+## 16. Manipulating Images
 
-### 15. Manipulating Images
+## 17. GUI Automation
 
-### 16. GUI Automation
-
-### 17. Other useful concepts from the course
+## 18. Other Useful Concepts from the Course
 
 - Input validation ensures data integrity is intact. Some packages (e.g. pyinputplus from section 8) have built-in functions
 to assist with this
